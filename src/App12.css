@@ -1,0 +1,137 @@
+#mechanical-title {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 3rem; /* Changed to relative units */
+}
+#titletext {
+  display: flex;
+  width: 90vw;
+  height: 100px;
+  padding-top: 0px;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  opacity: 0.81;
+  position: absolute; /* Changed to absolute positioning */
+  bottom: 20%; /* Adjusted to place near the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  font-family: Orbitron;
+  color: hsla(0, 0.00%, 100.00%, 1.00);
+  font-size: 105px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 20px;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: hsla(286, 0.00%, 0.00%, 1.00);
+}
+
+@media (max-width: 768px) {
+  #titletext {
+    font-size: 85px;
+  }
+}
+
+
+#FirstPage {
+  background-image: url("../public/teamEnthalpy.png");
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh; /* Changed to relative units */
+  padding-right: 5vw;
+  padding-bottom: 10vh; /* Changed to relative units */
+  padding-left: 6vw;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom-style: solid;
+  border-bottom-width: 0.125rem; /* Changed to relative units */
+  border-bottom-color: hsla(280, 100%, 50%, 1);
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+}
+
+#FirstPage:medium {
+  height: 510px;
+  background-position: center; /* Centers the image */
+  background-size: cover; /* Ensures the image covers the entire element */
+}
+
+.Section:local-styles {}
+
+.electronics {
+  display: flex;
+  /* height: 1605px; */
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #ac00ff;
+  background-image: linear-gradient(180deg, hsla(245.45454545454544, 100.00%, 2.16%, 1.00), #0b0144);
+}
+#electric-lead {
+  display: block;
+  width: 95vw;
+  height: 300px;
+  max-width: 992px;
+  margin-bottom: 25px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+  .mechanical {
+    
+      display: flex;
+      width: 95vw;
+      height: 1060px;
+      max-width: none;
+      margin-top: 40px;
+      padding-top: 14px;
+      padding-right: 22px;
+      padding-left: 22px;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      align-items: center;
+      border-top-style: solid;
+      border-top-width: 1px;
+      border-top-color: hsla(0, 0.00%, 100.00%, 1.00);
+      border-right-style: solid;
+      border-right-width: 1px;
+      border-right-color: hsla(0, 0.00%, 100.00%, 1.00);
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-bottom-color: hsla(0, 0.00%, 100.00%, 1.00);
+      border-left-style: solid;
+      border-left-width: 1px;
+      border-left-color: hsla(0, 0.00%, 100.00%, 1.00);
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      background-image: linear-gradient(135deg, hsla(245.99999999999997, 0.00%, 0.00%, 1.00) 17%, hsla(240, 4.65%, 21.66%, 1.00));
+      box-shadow: 0 2px 10px 4px hsla(280.70588235294116, 100.00%, 50.00%, 0.40);
+    }
+  
+
+.Electronics1
+{
+  border-top-left-radius: 50px;
+}
+.Electronics2
+{
+  border-bottom-right-radius: 50px;
+}
+.Mechanical1
+{
+  border-top-left-radius: 50px;
+}
+.Mechanical3
+{
+  border-bottom-right-radius: 50px;
+}

@@ -1,0 +1,93 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    border-bottom:1px solid #e9a4f9;
+    font-size:1.5rem;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 24px;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 20%;
+    font-weight: bold;
+    padding-top: 1%;
+  }
+  .menu :hover
+  {
+    color:#e9a4f9;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+   
+  }
+  
+  .dropbtn {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size:150%;
+  }
+  .dropbtn :hover
+  {
+    color: rgb(255, 21, 60);
+  }
+  
+  .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.871);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .dropdown-content div {
+    color: rgb(255, 255, 255);
+    border-top:1px solid #e9a4f99e;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .dropdown-content div:hover {
+    color:#e9a4f9;
+  }
+  
+  .contact-us {
+    background-color: black;
+    color: white;
+    border:1px solid white;
+    
+    border-radius:5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    
+  }
+  
+  .contact-us:hover 
+  {
+    border:1px solid #8900F5;
+    -webkit-text-stroke: #8900F5;
+    -webkit-text-stroke-color: #8900F5;
+    color: #FFFFFF;
+  }
+
+
+  

@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+*
+{
+    font-family: 'Orbitron';
+}
+body 
+{
+
+    background-color: black;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    min-height: 100vh; /* Ensure body fills viewport height */
+}
+.Nav
+{
+    size: 50%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.FirstPage {
+    background-image: url("../public/teamEnthalpy.png");
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.FirstPageContent
+{
+  font-family: 'Orbitron';
+   padding-left:40%;
+   padding-right:40%;
+   align-items: center;
+   margin:auto;
+   color: aliceblue;
+}
+.Enthalpytxt {
+    font-size: 3rem; /* Adjust as needed */
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.hover-button {
+    background-color: transparent;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    padding: 0.5rem 1rem;
+    font-family: 'Orbitron';
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 1rem;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .hover-button:hover {
+    background-color: aliceblue;
+    color: black;
   }
-  to {
-    transform: rotate(360deg);
-  }
+.SecondPage {
+    background-image: url("../public/Frame\ 2.png");
+    display:flex;
+    width: 100%;
+    height:100vh;
 }
+body {
+    background-color: black;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    min-height: 100vh; /* Ensure body fills viewport height */
+}
+
+.FirstPage, .SecondPage {
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 100vh; /* Ensure it fills the viewport height */
+    width: 100vw; /* Ensure it fills the viewport width */
+}
+.Stats
+{
+    padding-top:25%;
+    padding-bottom: 60%;
+    font-size:1rem;
+    color:white;
+}
+.ThirdPage
+{
+    height:100vh;
+    width:100%;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 800px) {
+    .FirstPage, .SecondPage {
+        height: 50vh; /* Reduce the height to show more than one page */
+    }
+}
+.threeModel
+{
+   width:40%;
+   height:100%;
+   /* align-items: center; */
+}
+.Footer
+{
+    z-index: 2;
+}
+

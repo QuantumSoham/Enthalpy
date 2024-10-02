@@ -1,0 +1,35 @@
+.banner {
+    /* background-image: url('../../public/teamEnthalpy.png'); */
+    display: flex;
+    width: 100vw; /* Ensure the banner spans the entire viewport width */
+    height: 150px;
+    max-width: 100%; /* Ensure the banner spans the entire width */
+    margin-bottom: 30px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: hsla(0, 0%, 0%, 0);
+    background-image: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.58), hsla(0, 0%, 0%, 0.58)), url('../../public/bannerpg.jpg');
+    background-position: 0px 0px, 50% 33%;
+    background-size: cover; /* Ensure the background image covers the entire banner */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: scroll;
+}
+
+.banner-text {
+    display: flex;
+    width: 520px;
+    height: 55px;
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+    font-family: Orbitron;
+    color: hsla(0, 0.00%, 56.67%, 1.00);
+    font-size: 5rem;
+    font-weight: 500;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: hsla(273, 100.00%, 14.00%, 1.00);
+}

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400;500;700&display=swap');
+:root {
+  --white: white;
+  --black: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #fff;
+  
+  font-size: 14px;
+  line-height: 20px;
+  color: #fbfbfb;
+  
+}
+
+.lead {
+  display: block;
+  width: 95vw;
+  font-family: 'Orbitron', Arial, sans-serif;
+  height: auto;
+  max-width: 992px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-right: 10px;
+  padding-left: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.w1-layout-blockcontainer {
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  font-size: 2.5rem;
+  margin:10px;
+  max-width: 94vh;
+}
+
+.w1-container {
+  /* margin-left: auto;
+  margin-right: auto; */
+  width:100vh;
+  max-width: 94vh;
+}
+
+
+    .heading {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        font-family: 'Exo' 2;
+        color: #e3dbfd;
+        font-size: 2 rem;
+        font-weight: 200;
+        text-align: center;
+      }
+      
+      .Heading:local-styles {}
+
+
+.flex-block-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-16 {
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.icon-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.vectors-wrapper {
+  display: block;
+}
+
+.vectors-wrapper-4 {
+  display: block;
+  position: relative;
+  top: -5px; /* Adjusted to shift the middle icon upwards */
+}
+
+.vectors-wrapper-5 
+{
+  display: block;
+}
+
+.paragraph-3 {
+  text-align: center;
+  height:30vh;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color:var(--white);
+  max-width: 1000px;
+  margin-top:20px;
+  margin-bottom: 20px;
+}

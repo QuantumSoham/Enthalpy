@@ -1,6 +1,6 @@
 Sure! Below is a sample `README.md` file for your Enthalpy website project. This file includes an overview of the project, a list of its components, and step-by-step instructions on how to clone the repository, set it up in a local directory, and install the necessary dependencies.
 
-```markdown
+
 # Enthalpy Website
 
 Welcome to the Enthalpy website repository. This project is a React-based web application that showcases various departments and projects of the Enthalpy team. The website includes interactive 3D models, department information, and a contact page.
@@ -50,7 +50,7 @@ Make sure you have the following software installed:
 
    ```bash
    git clone https://github.com/your-username/enthalpy-website.git
-   ```
+
 
 4. Navigate to the project directory:
 

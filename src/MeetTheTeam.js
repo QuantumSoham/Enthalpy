@@ -2,7 +2,7 @@ import React from 'react';
 import AvionicsSection from './components/members_card';
 import LeaderPage from './components/LeaderPage';
 import Banner from './components/Banner';
-import './App.css'
+import './App12.css'
 function App() {
   return (
     <>

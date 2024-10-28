@@ -164,6 +164,16 @@ body {
       transform: translateY(0);
     }
   }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   
   @keyframes fadeOut {
     from {
@@ -176,17 +186,48 @@ body {
     }
   }
   
-  .custom-footer-class {
+  .ThirdPage {
     opacity: 0;
     animation-duration: 1s;
     animation-fill-mode: forwards;
   }
   
-  .custom-footer-class.visible {
+  .ThirdPage.visible {
     animation-name: fadeIn;
   }
   
-  .custom-footer-class.hidden {
+  .ThirdPage.hidden {
     animation-name: fadeOut;
   }
   
+  /* Media query for smaller screens */
+  @media (max-width: 800px) {
+    .FirstPage, .SecondPage, .ThirdPage {
+      height: 50vh; /* Adjust the height for smaller screens */
+    }
+  }
+  
+
+  .FirstPage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1)), url("../public/teamEnthalpy.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.FirstPage.visible {
+    animation-name: fadeIn;
+}
+
+.FirstPage.hidden {
+    animation-name: fadeOut;
+}

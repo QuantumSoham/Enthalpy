@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/NavbarFinal';
 import Footer from './components/Footer';
 import ThreeScene from './components/ThreeScene';
+import MeetTheTeam from './MeetTheTeam.js'; // Import your MeetTheTeam component
 
 function App() {
   const [firstPageVisible, setFirstPageVisible] = useState(true);
@@ -34,29 +36,38 @@ function App() {
   }, []);
 
   return (
-    <>
+    <Router>
       <Navbar className="Nav" />
       <div className="Nav-place"></div>
-      <div className={`FirstPage ${firstPageVisible ? 'visible' : 'hidden'}`}>
-        <div className="FirstPageContent">
-          <span className="Enthalpytxt">ENTHALPY</span>
-          <button className="hover-button" onClick={() => { window.location.href = 'https://www.youtube.com'; }}>
-            Meet The Team
-          </button>
-        </div>
-      </div>
-      <div className={`SecondPage ${secondPageVisible ? 'visible' : 'hidden'}`}>
-        <div className='threeModel'>
-          <ThreeScene />
-        </div>
-        <div className='Stats'>
-          <p>Burn Rate:</p>
-          <p>Fuel Capacity:</p>
-          <p>Thrust:</p>
-        </div>
-      </div>
-      <Footer className={`custom-footer-class ${footerVisible ? 'visible' : 'hidden'}`} />
-    </>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <div className={`FirstPage ${firstPageVisible ? 'visible' : 'hidden'}`}>
+              <div className="FirstPageContent">
+                <span className="Enthalpytxt">ENTHALPY</span>
+                <Link to="/meet-the-team">
+                  <button className="hover-button">
+                    Meet The Team
+                  </button>
+                </Link>
+              </div>
+            </div>
+            <div className={`SecondPage ${secondPageVisible ? 'visible' : 'hidden'}`}>
+              <div className='threeModel'>
+                <ThreeScene />
+              </div>
+              <div className='Stats'>
+                <p>Burn Rate:</p>
+                <p>Fuel Capacity:</p>
+                <p>Thrust:</p>
+              </div>
+            </div>
+            <Footer className={`custom-footer-class ${footerVisible ? 'visible' : 'hidden'}`} />
+          </>
+        } />
+        <Route path="/meet-the-team" element={<MeetTheTeam />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -9,15 +9,24 @@ body
     background-color: black;
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
-    min-height: 100vh; /* Ensure body fills viewport height */
+    max-height: 100vh; /* Ensure body fills viewport height */
+    width:100vw;
 }
-.Nav
+.Nav-place
+{
+    height: 9vh;
+}
+
+
+/* .Nav
 {
     size: 50%;
-}
+} */
 
 .FirstPage {
     background-image: url("../public/teamEnthalpy.png");
+    
+    width: 100vw;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -31,6 +40,7 @@ body
    align-items: center;
    margin:auto;
    color: aliceblue;
+   transform: translateY(-65%);
 }
 .Enthalpytxt {
     font-size: 3rem; /* Adjust as needed */
@@ -75,10 +85,10 @@ body {
 }
 .Stats
 {
-    padding-top:25%;
-    padding-bottom: 60%;
+    
     font-size:1rem;
     color:white;
+    transform:translate(50%,50%);
 }
 .ThirdPage
 {

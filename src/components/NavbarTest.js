@@ -4,7 +4,9 @@ import './NavbarTest.css';
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">Logo</div>
+      
+      <img src={`${process.env.PUBLIC_URL}/enthalpyLogo.png`} alt="Logo" className="logo"/>
+      
       <ul className="menu">
         <li className="dropdown">
           <button className="dropbtn">Projects</button>

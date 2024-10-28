@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/NavbarTest'
+import Navbar from './components/NavbarFinal'
 import Footer from './components/Footer'
 import { createBrowserRouter } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Navbar className="Nav"/>
-      <div></div>
+      <div className="Nav-place"></div>
       <div className="FirstPage">
         <div className="FirstPageContent">
               <span className="Enthalpytxt">ENTHALPY</span>

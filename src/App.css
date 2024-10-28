@@ -2,15 +2,17 @@
 *
 {
     font-family: 'Orbitron';
+    
 }
 body 
 {
 
-    background-color: black;
+    background-color:black;
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     max-height: 100vh; /* Ensure body fills viewport height */
     width:100vw;
+    
 }
 .Nav-place
 {
@@ -68,6 +70,7 @@ body
     display:flex;
     width: 100%;
     height:100vh;
+    z-index:3;
 }
 body {
     background-color: black;
@@ -108,8 +111,82 @@ body {
    height:100%;
    /* align-items: center; */
 }
-.Footer
+.custom-footer-class
 {
-    z-index: 2;
+    margin-top:8%;
+    height:100vh;
 }
 
+/* Add these styles to your App.css or a relevant CSS file */
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+  .FirstPage, .SecondPage {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  .FirstPage.visible, .SecondPage.visible {
+    animation-name: fadeIn;
+  }
+  
+  .FirstPage.hidden, .SecondPage.hidden {
+    animation-name: fadeOut;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+  .custom-footer-class {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  .custom-footer-class.visible {
+    animation-name: fadeIn;
+  }
+  
+  .custom-footer-class.hidden {
+    animation-name: fadeOut;
+  }
+  

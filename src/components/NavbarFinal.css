@@ -122,9 +122,11 @@
     z-index: 1000;
     height: 60px; /* Set a fixed height for the navbar */
     padding-right: 40px;
+    border-bottom: 2px solid purple;
   }
   
   .logo img {
+    display: flex;
     height: 50px; /* Adjust the image height */
     width: auto; /* Maintain aspect ratio */
     max-height: 100%; /* Ensure the image does not exceed the navbar height */
@@ -135,9 +137,48 @@
     display: flex;
     list-style-type: none;
     margin: 0;
-    position: relative; /* Make this relative to position dropdowns */
-    transform:translate(-235%,-50%);
+    position: relative;
+    transform: translate(-240%, -50%);
   }
+  
+  /* For screens larger than 1200px */
+  @media (min-width: 1200px) {
+    .menu {
+      transform: translate(-235%, -50%);
+    }
+  }
+  /* For screens larger than 1200px */
+  @media (min-width: 920px) {
+    .menu {
+      transform: translate(-235%, -50%);
+    }
+  }
+  
+  /* For screens between 768px and 1199px */
+  @media (min-width: 820px) and (max-width: 1199px) {
+    .menu {
+      transform: translate(-150%, -50%);
+    }
+  }
+   /* For screens between 768px and 1199px */
+  @media (min-width: 820px) and (max-width: 1199px) {
+    .menu {
+      transform: translate(-150%, -50%);
+    }
+  }
+    /* For screens between 768px and 1199px */
+    @media (min-width: 760px) and (max-width: 820px) {
+      .menu {
+        transform: translate(-150%, -50%);
+      }
+    }
+  /* For screens smaller than 768px */
+  @media (max-width: 767px) {
+    .menu {
+      transform: translate(-100%, -50%);
+    }
+  }
+  
   
   .menu > li {
     position: relative;
@@ -151,6 +192,10 @@
     color: white;
     cursor: pointer;
     font-size: 1rem;
+  }
+  .dropbtn:hover
+  {
+    color:#D15EA1;
   }
   
   .dropdown-content {
@@ -176,6 +221,7 @@
   
   .dropdown:hover .dropdown-content {
     display: block;
+    color:#D15EA1;
   }
   
   .submenu-content {
@@ -205,7 +251,7 @@
   }
   
   .contact-us:hover {
-    background-color: violet;
-    color: black;
+    color:rgb(230, 197, 247);
+    border: 2px solid rgb(230, 197, 247);
   }
   

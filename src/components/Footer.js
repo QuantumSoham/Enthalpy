@@ -1,53 +1,55 @@
+
+import React from "react";
 import PropTypes from "prop-types";
-import styles from "./Footer1.module.css";
+import styles from "./Footer.module.css";
 
 const Footer = ({ className = "" }) => {
   return (
     <div className={[styles.footer, className].join(" ")}>
-      <header className={styles.frameParent}>
-        <div className={styles.instaIconParent}>
+      <div className={styles.line1}>
+      <header className={styles.header}>
+        <div className={styles.logoAndIcons}>
           <img
-            className={styles.instaIcon}
-            loading="lazy"
-            alt=""
-            src="/insta-icon.png"
+            className={styles.enthalpyLogo}
+            alt="Enthalpy Logo"
+            src="/enthalpyLogo.png"
           />
-          <img
-            className={styles.linkedinIcon}
-            alt=""
-            src="/linkedin-icon.png"
-          />
-          <img
-            className={styles.xIcon}
-            loading="lazy"
-            alt=""
-            src="/x-icon.png"
-          />
-          <img className={styles.image2Icon} alt="" src="/image-2.png" />
         </div>
-        <div className={styles.teamenthalpyvitcgmailcomParent}>
-          <div className={styles.teamenthalpyvitcgmailcom}>
-            teamenthalpyvitc@gmail.com
-          </div>
-          <div className={styles.vectorWrapper}>
-            <img
-              className={styles.frameChild}
-              loading="lazy"
-              alt=""
-              src="/line-16.png"
-            />
-          </div>
+        <div className={styles.contactInfo}>
+          <div className={styles.email}>teamenthalpyvitc@gmail.com</div>
         </div>
       </header>
-      <div className={styles.vitLogo1Wrapper}>
+      </div>
+      
+      <div className={styles.line4}>
+      <div className={styles.divider} />
+      </div>
+      
+      <div className={styles.line2}>
+      <div className={styles.socialIcons}>
+        <a href="https://instagram.com/your_instagram" target="_blank" rel="noopener noreferrer">
+          <img className={styles.instaIcon} alt="Instagram" src="/insta-icon.png" />
+        </a>
+        <a href="https://linkedin.com/in/your_linkedin" target="_blank" rel="noopener noreferrer">
+          <img className={styles.linkedinIcon} alt="LinkedIn" src="/linkedin-icon.png" />
+        </a>
+        <a href="https://x.com/your_x_profile" target="_blank" rel="noopener noreferrer">
+          <img className={styles.xIcon} alt="X" src="/x-icon.png" />
+        </a>
+      </div>
+      </div>
+      
+      <div className={styles.line3}>
+      <div className={styles.vitLogoWrapper}>
         <img
-          className={styles.vitLogo1Icon}
-          loading="lazy"
-          alt=""
+          className={styles.vitLogo}
+          alt="VIT Logo"
           src="/vit-logo.png"
         />
       </div>
     </div>
+      </div>
+      
   );
 };
 

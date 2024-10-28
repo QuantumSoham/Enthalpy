@@ -1,32 +1,46 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
+import { useDrag } from '@use-gesture/react';
 
 function Model({ url }) {
   const gltf = useGLTF(url);
   const ref = useRef();
-  
-  // Rotate the model continuously
-  useFrame(() => {
-    ref.current.rotation.y += 0.000;
+  const [position, setPosition] = useState([0, -90, 0]);
+
+  // Handle drag gesture
+  const bind = useDrag(({ offset: [x, y] }) => {
+    setPosition([x / 100, -90, y / 100]);
+  }, {
+    onDragEnd: () => setPosition([0, -90, 0]) // Reset position on drag end
   });
 
-  return <primitive ref={ref} object={gltf.scene} position={[0, -8, -2]} rotation={[0, 0, 0]} />; // Ensure the model is upright and centered
+  return (
+    <primitive
+      ref={ref}
+      object={gltf.scene}
+      position={position}
+      rotation={[0, 1, 0]}
+      {...bind()} // Apply drag bindings
+    />
+  );
 }
 
 export default function ModelViewer() {
   return (
     <Canvas
       className='ThreeCanvas' // Adjust canvas size if needed
-      camera={{ position: [-10, 0, -20], fov: 40 }} // Adjust camera position and field of view
+      camera={{ position: [10, 0, 400], fov: 25 }} // Move camera to the side for a side view
     >
       <ambientLight intensity={1} />
       <directionalLight position={[10, 10, 5]} intensity={5} />
-      <Model url="/black_hawk.glb" />
+      <Model url="/black_hawknew.glb" />
       <OrbitControls />
     </Canvas>
   );
 }
+
+
 // import React, { useRef, useEffect, useState } from 'react';
 // import { Canvas, useFrame } from '@react-three/fiber';
 // import { OrbitControls, useGLTF } from '@react-three/drei';

@@ -1,8 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './NavbarFinal.css';
 
 function Navbar() {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/'); // Navigate to the home route
+    setTimeout(() => {
+      const contactElement = document.getElementById('contact');
+      if (contactElement) {
+        contactElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 0); // Delay to ensure navigation completes before scrolling
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -43,7 +55,7 @@ function Navbar() {
           </ul>
         </li>
       </ul>
-      <button className="contact-us" onClick={() => window.location.href = '/#contact'}>CONTACT US</button>
+      <button className="contact-us" onClick={handleContactClick}>CONTACT US</button>
     </nav>
   );
 }

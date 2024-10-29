@@ -62,6 +62,7 @@ function App() {
                 <p>Thrust:</p>
               </div>
             </div>
+            <div id="contact"></div>
             <Footer className={`custom-footer-class ${footerVisible ? 'visible' : 'hidden'}`} />
           </>
         } />

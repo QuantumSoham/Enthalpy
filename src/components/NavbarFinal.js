@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './NavbarFinal.css';
 
 function Navbar() {
@@ -11,41 +12,38 @@ function Navbar() {
         <li className="dropdown">
           <button className="dropbtn">PROJECTS</button>
           <ul className="dropdown-content">
-            <li><a href="#blackhawk">Black Hawk</a></li>
-            <li><a href="#hornet">Hornet</a></li>
+            <li><Link to="/meet-the-team#blackhawk">Black Hawk</Link></li>
+            <li><Link to="/meet-the-team#hornet">Hornet</Link></li>
           </ul>
         </li>
         <li className="dropdown">
           <button className="dropbtn">DEPARTMENTS</button>
           <ul className="dropdown-content">
             <li className="submenu">
-              <a href="#electronics">Electronics</a>
+              <Link to="/meet-the-team#electronics">Electronics</Link>
               <ul className="submenu-content">
-                <li><a href="#subdepartment1">Sub Department 1</a></li>
-                <li><a href="#subdepartment2">Sub Department 2</a></li>
-                <li><a href="#subdepartment3">Sub Department 3</a></li>
+                <li><Link to="/meet-the-team#electronics-avionics">Avionics</Link></li>
+                <li><Link to="/meet-the-team#electronics-payload">Payload</Link></li>
               </ul>
             </li>
             <li className="submenu">
-              <a href="#mechanical">Mechanical</a>
+              <Link to="/meet-the-team#mechanical">Mechanical</Link>
               <ul className="submenu-content">
-                <li><a href="#subdepartment1">Sub Department 1</a></li>
-                <li><a href="#subdepartment2">Sub Department 2</a></li>
-                <li><a href="#subdepartment3">Sub Department 3</a></li>
+                <li><Link to="/meet-the-team#mechanical-aerodynamics">Aerodynamics & Airframe</Link></li>
+                <li><Link to="/meet-the-team#mechanical-propulsion">Propulsion</Link></li>
+                <li><Link to="/meet-the-team#mechanical-recovery">Recovery</Link></li>
               </ul>
             </li>
             <li className="submenu">
-              <a href="#management">Management</a>
+              <Link to="/meet-the-team#management">Management</Link>
               <ul className="submenu-content">
-                <li><a href="#subdepartment1">Sub Department 1</a></li>
-                <li><a href="#subdepartment2">Sub Department 2</a></li>
-                <li><a href="#subdepartment3">Sub Department 3</a></li>
+                <li><Link to="/meet-the-team#management-marketing">Marketing</Link></li>
               </ul>
             </li>
           </ul>
         </li>
       </ul>
-      <button className="contact-us" onClick={() => window.location.href = '/contact'}>CONTACT US</button>
+      <button className="contact-us" onClick={() => window.location.href = '/#contact'}>CONTACT US</button>
     </nav>
   );
 }

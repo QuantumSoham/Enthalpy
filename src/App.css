@@ -7,7 +7,7 @@
 body 
 {
 
-    background-color:black;
+    background-image: url("../public/bgm.jpg");
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     max-height: 100vh; /* Ensure body fills viewport height */
@@ -16,7 +16,7 @@ body
 }
 .Nav-place
 {
-    height: 9vh;
+    height: 5vh;
 }
 
 
@@ -45,7 +45,7 @@ body
    transform: translateY(-65%);
 }
 .Enthalpytxt {
-    font-size: 3rem; /* Adjust as needed */
+    font-size: 4rem; /* Adjust as needed */
     margin-bottom: 1rem;
     font-weight: bold;
 }

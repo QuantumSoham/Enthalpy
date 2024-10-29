@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import AvionicsSection from './components/members_card';
 import LeaderPage from './components/LeaderPage';
@@ -7,11 +7,40 @@ import './MeetTheTeam.css';
 
 function MeetTheTeam() {
   const location = useLocation();
+  const sectionsRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    sectionsRef.current.forEach((section) => {
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      sectionsRef.current.forEach((section) => {
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, []);
 
   useEffect(() => {
     if (location.hash) {
       const element = document.getElementById(location.hash.substring(1));
-      console.log(element, "found");
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
@@ -20,12 +49,12 @@ function MeetTheTeam() {
 
   return (
     <>
-      <div id="FirstPage">
+      <div id="FirstPage" className="fade-in" ref={(el) => sectionsRef.current[0] = el}>
         <div id="titletext">
           ENTHALPY
         </div>
       </div>
-      <div className="electronics" id="electronics">
+      <div className="electronics fade-in" id="electronics" ref={(el) => sectionsRef.current[1] = el}>
         <Banner 
           department="ELECTRONICS" 
           text="Welcome to the Electronics Department" 
@@ -57,7 +86,7 @@ function MeetTheTeam() {
           />
         </div>
       </div>
-      <div className="electronics" id="mechanical">
+      <div className="electronics fade-in" id="mechanical" ref={(el) => sectionsRef.current[2] = el}>
         <Banner 
           department="MECHANICAL" 
           text="Welcome to the Mechanical Department" 
@@ -99,7 +128,7 @@ function MeetTheTeam() {
           />
         </div>
       </div>
-      <div className="electronics" id="management">
+      <div className="electronics fade-in" id="management" ref={(el) => sectionsRef.current[3] = el}>
         <Banner 
           department="MANAGEMENT" 
           text="Welcome to the Management Department" 

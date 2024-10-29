@@ -135,3 +135,15 @@
 {
   border-bottom-right-radius: 50px;
 }
+
+
+
+/* MeetTheTeam.css */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}

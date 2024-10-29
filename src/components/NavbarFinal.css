@@ -106,6 +106,8 @@
   }
    */
 
+   @import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
    body {
     font-family: 'Orbitron', sans-serif;
   }
@@ -120,17 +122,17 @@
     top: 0;
     width: 100vw;
     z-index: 1000;
-    height: 60px; /* Set a fixed height for the navbar */
+    height: 100px; /* Set a fixed height for the navbar */
     padding-right: 40px;
-    border-bottom: 2px solid purple;
+    border-bottom: 2px solid rgb(112, 73, 162);
   }
   
   .logo img {
     display: flex;
-    height: 50px; /* Adjust the image height */
+    height: 55px; /* Adjust the image height */
     width: auto; /* Maintain aspect ratio */
     max-height: 100%; /* Ensure the image does not exceed the navbar height */
-    transform: translate(0%,-25%);
+    transform: translate(25%,-26%);
   }
   
   .menu {
@@ -239,19 +241,24 @@
   .contact-us {
     display: flex;
     background: none;
-    border: 2px solid white;
-    color: white;
-    padding: 5px 15px;
+    border: 0.5px solid white;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 15px 10px 10px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     position: absolute;
     right: 20px; /* Adjust this value to position the button */
     top: 50%; /* Center vertically */
-    transform: translate(-50%,-50%);
+    transform: translate(-5%,-48%);
+    font-family: 'Aldrich', sans-serif;
+    font-size: 150%;
+    letter-spacing: 1px;
   }
   
   .contact-us:hover {
-    color:rgb(230, 197, 247);
-    border: 2px solid rgb(230, 197, 247);
+    -webkit-text-stroke: 0.5px rgb(137, 0, 245);
+    color:white;
+    border: 1px solid rgb(215, 166, 255);
   }
   

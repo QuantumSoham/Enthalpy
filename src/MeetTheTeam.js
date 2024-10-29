@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import AvionicsSection from './components/members_card';
 import LeaderPage from './components/LeaderPage';
 import Banner from './components/Banner';
-import './App12.css';
+import './MeetTheTeam.css';
 
 function MeetTheTeam() {
   const location = useLocation();

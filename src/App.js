@@ -44,7 +44,6 @@ function App() {
           <>
             <div className={`FirstPage ${firstPageVisible ? 'visible' : 'hidden'}`}>
               <div className="FirstPageContent">
-                <span className="Enthalpytxt">ENTHALPY</span>
                 <Link to="/meet-the-team">
                   <button className="hover-button">
                     Meet The Team

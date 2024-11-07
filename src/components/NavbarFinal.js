@@ -24,32 +24,32 @@ function Navbar() {
         <li className="dropdown">
           <button className="dropbtn">PROJECTS</button>
           <ul className="dropdown-content">
-            <li><Link to="/meet-the-team#blackhawk">Black Hawk</Link></li>
-            <li><Link to="/meet-the-team#hornet">Hornet</Link></li>
+            <li><Link to="/meet-the-team#blackhawk">BLACK HAWK</Link></li>
+            <li><Link to="/meet-the-team#hornet">HORNET</Link></li>
           </ul>
         </li>
         <li className="dropdown">
           <button className="dropbtn">DEPARTMENTS</button>
           <ul className="dropdown-content">
             <li className="submenu">
-              <Link to="/meet-the-team#electronics">Electronics</Link>
+              <Link to="/meet-the-team#electronics">ELECTRONICS</Link>
               <ul className="submenu-content">
-                <li><Link to="/meet-the-team#electronics-avionics">Avionics</Link></li>
-                <li><Link to="/meet-the-team#electronics-payload">Payload</Link></li>
+                <li><Link to="/meet-the-team#electronics-avionics">AVIONICS</Link></li>
+                <li><Link to="/meet-the-team#electronics-payload">PAYLOAD</Link></li>
               </ul>
             </li>
             <li className="submenu">
-              <Link to="/meet-the-team#mechanical">Mechanical</Link>
+              <Link to="/meet-the-team#mechanical">MECHANICAL</Link>
               <ul className="submenu-content">
-                <li><Link to="/meet-the-team#mechanical-aerodynamics">Aerodynamics & Airframe</Link></li>
-                <li><Link to="/meet-the-team#mechanical-propulsion">Propulsion</Link></li>
-                <li><Link to="/meet-the-team#mechanical-recovery">Recovery</Link></li>
+                <li><Link to="/meet-the-team#mechanical-aerodynamics">AERODYNAMICS AND AIRFRAME</Link></li>
+                <li><Link to="/meet-the-team#mechanical-propulsion">PROPULSION</Link></li>
+                <li><Link to="/meet-the-team#mechanical-recovery">RECOVERY</Link></li>
               </ul>
             </li>
             <li className="submenu">
-              <Link to="/meet-the-team#management">Management</Link>
+              <Link to="/meet-the-team#management">MANAGEMENT</Link>
               <ul className="submenu-content">
-                <li><Link to="/meet-the-team#management-marketing">Marketing</Link></li>
+                <li><Link to="/meet-the-team#management-marketing">MARKETING</Link></li>
               </ul>
             </li>
           </ul>

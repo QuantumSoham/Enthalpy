@@ -41,6 +41,40 @@ export default function ModelViewer() {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import React, { useRef, useEffect, useState } from 'react';
 // import { Canvas, useFrame } from '@react-three/fiber';
 // import { OrbitControls, useGLTF } from '@react-three/drei';
@@ -101,5 +135,93 @@ export default function ModelViewer() {
 //         <OrbitControls />
 //       </Canvas>
 //     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useRef, useState, useEffect } from 'react';
+// import { Canvas, useFrame } from '@react-three/fiber';
+// import { OrbitControls, useGLTF } from '@react-three/drei';
+// import { useDrag } from '@use-gesture/react';
+
+// function Model({ url }) {
+//   const gltf = useGLTF(url);
+//   const ref = useRef();
+//   const [position, setPosition] = useState([0, -90, 0]);
+//   const [hovered, setHovered] = useState(false);  // Track hover state
+//   const [error, setError] = useState(null);  // Track model loading errors
+
+//   // Handle drag gesture
+//   const bind = useDrag(({ offset: [x, y], memo = position }) => {
+//     if (hovered) {
+//       setPosition([x / 100, -90, y / 100]);
+//     }
+//     return memo;
+//   }, {
+//     onDragEnd: () => setPosition([0, -90, 0]) // Reset position on drag end
+//   });
+
+//   useEffect(() => {
+//     if (gltf.error) {
+//       setError('Failed to load the model');
+//     }
+//   }, [gltf]);
+
+//   return (
+//     <>
+//       {error && <div style={{ color: 'red', position: 'absolute', top: '10px', left: '10px' }}>{error}</div>}
+//       <primitive
+//         ref={ref}
+//         object={gltf.scene}
+//         position={position}
+//         rotation={[0, 1, 0]}
+//         scale={1}  // Scale the model to a visible size
+//         onPointerOver={() => setHovered(true)}  // Set hovered to true on mouse over
+//         onPointerOut={() => setHovered(false)}  // Set hovered to false when mouse leaves
+//         {...bind()} // Apply drag bindings only if hovered
+//       />
+//     </>
+//   );
+// }
+
+// export default function ModelViewer() {
+//   return (
+//     <Canvas
+//       className="ThreeCanvas"
+//       camera={{ position: [10, 0, 400], fov: 25 }}  // Adjust camera position to fit the model
+//     >
+//       <ambientLight intensity={1} />
+//       <directionalLight position={[10, 10, 5]} intensity={5} />
+//       <Model url="/black_hawknew.glb" />
+//       <OrbitControls />
+//     </Canvas>
 //   );
 // }

@@ -34,7 +34,8 @@ body
     justify-content: center;
     display: flex;
 }
-.FirstPageContent
+
+/* .FirstPageContent
 {
   font-family: 'Orbitron';
    padding-left:40%;
@@ -45,25 +46,31 @@ body
    transform: translateY(-65%);
 }
 .Enthalpytxt {
-    font-size: 4rem; /* Adjust as needed */
+    font-size: 10rem; /* Adjust as needed 
     margin-bottom: 1rem;
     font-weight: bold;
-}
+} */
+
 .hover-button {
     background-color: transparent;
-    color: aliceblue;
-    border: 2px solid aliceblue;
+    backdrop-filter: blur(1.5px);
+    color: white;
+    border: 2px solid white;
+    border-radius: 3px;
     padding: 0.5rem 1rem;
     font-family: 'Orbitron';
-    font-size: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    margin-top: 1rem;
+    transition: background-color 0.3s, color 0.3s, border-width 0.3s;
+    margin-bottom: 7rem;
   }
   
   .hover-button:hover {
-    background-color: aliceblue;
-    color: black;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
   }
 .SecondPage {
     background-image: url("../public/Frame\ 2.png");

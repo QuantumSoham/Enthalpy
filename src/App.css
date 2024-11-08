@@ -20,6 +20,7 @@ body
 }
 
 
+
 /* .Nav
 {
     size: 50%;
@@ -72,6 +73,7 @@ body
     color: white;
     border: 1px solid white;
   }
+  
 .SecondPage {
     background-image: url("../public/Frame\ 2.png");
     display:flex;
@@ -147,6 +149,20 @@ body {
       transform: translateY(-20px);
     }
   }
+
+  /* Loading Spinner */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
   
   .FirstPage, .SecondPage {
     opacity: 0;

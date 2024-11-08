@@ -5,13 +5,20 @@ import Navbar from './components/NavbarFinal';
 import Footer from './components/Footer';
 import ThreeScene from './components/ThreeScene';
 import MeetTheTeam from './MeetTheTeam.js'; // Import your MeetTheTeam component
+import { PushSpinner } from "react-spinners-kit";
 
 function App() {
   const [firstPageVisible, setFirstPageVisible] = useState(true);
   const [secondPageVisible, setSecondPageVisible] = useState(false);
   const [footerVisible, setFooterVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;

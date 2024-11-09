@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './NavbarFinal.css';
+import App from '/Users/suman/Desktop/Enthalpy/Website/Enthalpy_Website/src/App.js';
 
 function Navbar() {
   const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    navigate('/'); // Navigate to the home route
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
+  };
 
   const handleContactClick = () => {
     navigate('/'); // Navigate to the home route
@@ -18,7 +24,9 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src={`${process.env.PUBLIC_URL}/enthalpyLogo.png`} alt="Logo" />
+        <Link to="/" onClick={handleLogoClick}>
+          <img src={`${process.env.PUBLIC_URL}/enthalpyLogo.png`} alt="Logo" />
+        </Link>
       </div>
       <ul className="menu">
         <li className="dropdown">

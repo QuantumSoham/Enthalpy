@@ -6,13 +6,13 @@ import { useDrag } from '@use-gesture/react';
 function Model({ url }) {
   const gltf = useGLTF(url);
   const ref = useRef();
-  const [position, setPosition] = useState([0, -90, 0]);
+  const [position, setPosition] = useState([40, -100, -26]);
 
   // Handle drag gesture
   const bind = useDrag(({ offset: [x, y] }) => {
-    setPosition([x / 100, -90, y / 100]);
+    setPosition([x / 100 + 40, -100, -26 + y / 100]);
   }, {
-    onDragEnd: () => setPosition([0, -90, 0]) // Reset position on drag end
+    onDragEnd: () => setPosition([40, -100, -26]) // Reset position on drag end
   });
 
   return (
@@ -20,7 +20,7 @@ function Model({ url }) {
       ref={ref}
       object={gltf.scene}
       position={position}
-      rotation={[0, 1, 0]}
+      rotation={[0, 90, 0]}
       {...bind()} // Apply drag bindings
     />
   );
@@ -30,7 +30,7 @@ export default function ModelViewer() {
   return (
     <Canvas
       className='ThreeCanvas' // Adjust canvas size if needed
-      camera={{ position: [10, 0, 400], fov: 25 }} // Move camera to the side for a side view
+      camera={{ position: [200, 0, 300], fov: 25}} // Move camera to the side for a side view
     >
       <ambientLight intensity={1} />
       <directionalLight position={[10, 10, 5]} intensity={5} />
@@ -39,14 +39,6 @@ export default function ModelViewer() {
     </Canvas>
   );
 }
-
-
-
-
-
-
-
-
 
 
 
